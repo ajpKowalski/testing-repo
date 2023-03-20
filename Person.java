@@ -41,4 +41,23 @@ public class Person {
     public void setAge(Integer age) {
         this.age = age;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person person)) return false;
+
+        if (getName() != null ? !getName().equals(person.getName()) : person.getName() != null) return false;
+        if (getSurname() != null ? !getSurname().equals(person.getSurname()) : person.getSurname() != null)
+            return false;
+        return getAge() != null ? getAge().equals(person.getAge()) : person.getAge() == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getName() != null ? getName().hashCode() : 0;
+        result = 31 * result + (getSurname() != null ? getSurname().hashCode() : 0);
+        result = 31 * result + (getAge() != null ? getAge().hashCode() : 0);
+        return result;
+    }
 }
