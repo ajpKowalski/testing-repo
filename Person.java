@@ -60,4 +60,8 @@ public class Person {
         result = 31 * result + (getAge() != null ? getAge().hashCode() : 0);
         return result;
     }
+
+    public static void main(String[] args) {
+        System.out.println("Hello");
+    }
 }
