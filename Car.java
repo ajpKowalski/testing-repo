@@ -6,4 +6,12 @@ public class Car {
         this.model = model;
         this.brand = brand;
     }
+
+    public String getModel() {
+        return model;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
 }
