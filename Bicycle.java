@@ -4,4 +4,8 @@ public class Bicycle {
     public Bicycle(Integer size) {
         this.size = size;
     }
+
+    public void setSize(Integer size) {
+        this.size = size;
+    }
 }
